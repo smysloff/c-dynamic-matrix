@@ -23,8 +23,8 @@
 typedef struct	s_matrix
 {
 	int			**arr; /** указатель на матрицу */
-	int			cols;  /** количество колонок */
 	int			rows;  /** количество строк */
+	int			cols;  /** количество колонок */
 
 	/**
 	** @brief внутренний элемент, необходимый для правильного создания матрицы
@@ -32,7 +32,7 @@ typedef struct	s_matrix
 	char		*_data;
 }				t_matrix;
 
-t_matrix	*matrix_create(unsigned cols, unsigned rows);
+t_matrix	*matrix_create(unsigned rows, unsigned cols);
 void		matrix_delete(t_matrix *matrix);
 
 #endif

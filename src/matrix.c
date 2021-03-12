@@ -24,7 +24,7 @@
 ** @param cols количество колонок
 ** @return указатель на матрицу
 **/
-t_matrix			*matrix_create(unsigned cols, unsigned rows)
+t_matrix			*matrix_create(unsigned rows, unsigned cols)
 {
 	t_matrix	*m;
 	unsigned	i;
