@@ -13,7 +13,7 @@ int				main()
 	cols = 5;
 	rows = strlen(textmap) / cols;
 
-	tilemap = matrix_create(cols, rows);
+	tilemap = matrix_create(rows, cols);
 	if (!tilemap)
 		return (1);
 
