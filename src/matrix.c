@@ -33,12 +33,12 @@ t_matrix		*matrix_create(unsigned rows, unsigned cols, size_t size)
 	unsigned	i;
 
 	// выделение памяти под структуру
-	m = malloc(sizeof(char *) + sizeof(char *) + sizeof(int) * 2);
+	m = (t_matrix *)malloc((sizeof(t_matrix)));
 	if (!m)
 		return (NULL);
 
 	// выделение памяти под массив указателей и их содержимое
-	m->arr = (char **)malloc(sizeof(char *) * rows + sizeof(size) * rows * cols);
+	m->arr = (char **)malloc((sizeof(char *) + sizeof(size) * cols) * rows);
 	if (!m->arr)
 	{
 		free(m);

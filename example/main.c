@@ -19,7 +19,7 @@ int				main()
 
 	for (y = 0; y < tilemap->rows; ++y)
 		for (x = 0; x < tilemap->cols; ++x)
-			tilemap->arr[y][x] = *textmap++ - '0';
+			tilemap->arr[y][x] = *textmap++ - 48;
 
 	for (y = 0; y < tilemap->rows; ++y)
 	{
