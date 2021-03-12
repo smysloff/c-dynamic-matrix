@@ -33,7 +33,7 @@ t_matrix		*matrix_create(unsigned rows, unsigned cols, size_t size)
 	unsigned	i;
 
 	// выделение памяти под структуру
-	m = (t_matrix *)malloc((sizeof(t_matrix)));
+	m = (t_matrix *)malloc(sizeof(t_matrix));
 	if (!m)
 		return (NULL);
 
