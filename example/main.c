@@ -14,6 +14,8 @@ int				main()
 	rows = strlen(textmap) / cols;
 
 	tilemap = matrix_create(cols, rows);
+	if (!tilemap)
+		return (1);
 
 	for (int y = 0; y < tilemap->rows; ++y)
 		for (int x = 0; x < tilemap->cols; ++x)

@@ -37,7 +37,10 @@ t_matrix			*matrix_create(unsigned cols, unsigned rows)
 	// выделение памяти под массив указателей и их содержимое
 	m->arr = (int **)malloc(sizeof(int *) * rows + sizeof(int) * rows * cols);
 	if (!m->arr)
+	{
+		free(m);
 		return (NULL);
+	}
 
 	// внутренний указатель, указывающий на память с данными массива
 	m->_data = (char *)m->arr;
